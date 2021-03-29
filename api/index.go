@@ -82,7 +82,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	response := StatResponse{200, &data}
-	fmt.Fprint(w, response.Status)
 	res, _ := json.Marshal(response)
 	fmt.Fprint(w, string(res))
 }
